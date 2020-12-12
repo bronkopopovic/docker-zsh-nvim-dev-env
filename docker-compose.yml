@@ -1,9 +1,13 @@
 version: "3.9"
 services:
   env:
-    image: env
+    build: .
     container_name: env
     restart: always
     tty: true
     volumes:
       - /Users/roman/Desktop/w:/home/roman/w
+      - home:/home/roman
+
+volumes:
+  home:
