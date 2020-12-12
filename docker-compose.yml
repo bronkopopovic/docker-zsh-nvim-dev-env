@@ -5,8 +5,11 @@ services:
     container_name: env
     restart: always
     tty: true
+    env_file:
+      - .env
     volumes:
-      - /Users/roman/Desktop/w:/home/roman/w
+      - $WORKDIR:/home/roman/w
+      - $SSHDIR:/home/roman/.ssh
       - home:/home/roman
 
 volumes:
